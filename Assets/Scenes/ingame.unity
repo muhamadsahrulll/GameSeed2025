@@ -972,7 +972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Draw Button
+  m_text: Endturn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1769,6 +1769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a7209b921c93946aeddcea8afcd88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hariData: []
+  startingDeck: {fileID: 0}
+  pertanyaanPool: []
+  deckManager: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1170202926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04147917, y: 0.264}
   m_AnchorMax: {x: 0.18547916, y: 0.32784092}
-  m_AnchoredPosition: {x: 3.5, y: 2.300003}
+  m_AnchoredPosition: {x: 3.5, y: 2.3000183}
   m_SizeDelta: {x: -2.4484863, y: -10.521606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490527967
@@ -2772,7 +2777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1629327660
 RectTransform:
   m_ObjectHideFlags: 0

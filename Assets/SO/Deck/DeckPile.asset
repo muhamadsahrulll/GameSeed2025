@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89acdc1e5dcdc9644b59e55001f85220, type: 3}
+  m_Name: DeckPile
+  m_EditorClassIdentifier: 
+  deckName: Deck
+  kartuList:
+  - {fileID: 11400000, guid: 268da1c3e88445b4c96198c1f4a0402e, type: 2}
+  - {fileID: 11400000, guid: 7cc1039cbe8898c4fa2a4a11bec72646, type: 2}
+  - {fileID: 11400000, guid: 312ffc43c5b3b364da78cefd406ab31a, type: 2}
+  - {fileID: 11400000, guid: 29983e6b69dd6d84985b33d26f9fd087, type: 2}
+  - {fileID: 11400000, guid: 96da119dd8e4cf34aba2775d11d2657c, type: 2}
+  - {fileID: 11400000, guid: 97716736c7301ed4d87cfeb6831b2995, type: 2}
+  - {fileID: 11400000, guid: 14e858ef2ad2a124e9ae74931f93a203, type: 2}
+  - {fileID: 11400000, guid: 95e212b13d974fe4fa5f9d34c2673533, type: 2}
+  - {fileID: 11400000, guid: b9d358379fa076848beab4cfb6f43547, type: 2}
