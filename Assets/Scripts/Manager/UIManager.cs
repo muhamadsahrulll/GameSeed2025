@@ -1,38 +1,40 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections.Generic;
-using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Dialog Orangtua")]
     public TMP_Text parentText;
     public Image parentIcon;
-    public TMP_Text messageText;
-    public Slider satisfySlider;
+
+    [Header("Day Popup")]
+    public TMP_Text dayText;
+
+    [Header("Hand & Kartu")]
     public Transform handContainer;
     public GameObject cardPrefab;
 
-    [Header("Hari ke")]
-    public TMP_Text dayText; // ← referensi TMP text "Hari ke-X"
-    //public GameObject dayUI;
-
-    // Referensi ikon emoticon di Inspector
+    [Header("Emoticon Icons")]
     public Sprite encourageIcon;
     public Sprite empathyIcon;
     public Sprite rudeIcon;
 
+    [Header("Satisfy Bar")]
+    public Slider satisfySlider;
+
+    [Header("Message Popup")]
+    public TMP_Text messageText;
+
     public void ShowDayPopup(int day)
     {
-        //dayUI.SetActive(true);
         dayText.gameObject.SetActive(true);
-        dayText.text = "Hari ke-" + day;
-        StartCoroutine(HideDayTextAfterDelay());
-        Debug.Log("Menampilkan Hari ke-" + day);
-
+        dayText.text = $"Hari ke-{day}";
+        StartCoroutine(HideDayPopup());
     }
 
-    IEnumerator HideDayTextAfterDelay()
+    IEnumerator HideDayPopup()
     {
         yield return new WaitForSeconds(2f);
         dayText.gameObject.SetActive(false);
@@ -55,9 +57,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowChildDialog(string text)
+    public void ShowChildDialog(string childText)
     {
-        // TODO: tampilkan teks dialog anak
+        // Implementasikan popup dialog anak jika perlu
+        Debug.Log("Dialog anak: " + childText);
     }
 
     public void UpdateSatisfyBar(int current, int max)
@@ -70,41 +73,37 @@ public class UIManager : MonoBehaviour
     {
         if (cardPrefab == null || handContainer == null)
         {
-            Debug.LogError("Card prefab atau handContainer belum diset di Inspector.");
+            Debug.LogError("CardPrefab atau handContainer belum diset!");
             return;
         }
 
         var go = Instantiate(cardPrefab, handContainer);
         var cardUI = go.GetComponent<CardView>();
-
-        if (cardUI != null)
-        {
-            cardUI.Setup(cardSO);
-        }
-        else
-        {
-            Debug.LogWarning("Prefab tidak memiliki komponen CardView.");
-        }
+        if (cardUI != null) cardUI.Setup(cardSO);
     }
-
 
     public void ShowWin()
     {
-        // TODO: tampilkan window win
+        Debug.Log("You Win!");
+        // Tampilkan panel win
     }
 
     public void ShowGameOver()
     {
-        // TODO: tampilkan window game over
-    }
-
-    public void ShowNextDay()
-    {
-        // TODO: panggil GameController untuk start day berikutnya
+        Debug.Log("Game Over!");
+        // Tampilkan panel lose
     }
 
     public void ShowMessage(string msg)
     {
-        // TODO: tampilkan pesan singkat ke pemain
+        messageText.text = msg;
+        // Tampilkan sementara lalu sembunyikan kembali
+        StartCoroutine(HideMessage());
+    }
+
+    IEnumerator HideMessage()
+    {
+        yield return new WaitForSeconds(1.5f);
+        messageText.text = "";
     }
 }
