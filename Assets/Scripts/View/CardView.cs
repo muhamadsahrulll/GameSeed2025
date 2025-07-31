@@ -1,25 +1,36 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CardView : MonoBehaviour
 {
-    public Image iconImage;
     public TMP_Text dialogText;
+    public TMP_Text typeText;
+    public TMP_Text satisfyPointText;
+    public Image iconImage;
 
-    private KartuSO kartuData;
+    // Icon sprite dari UIManager (bisa juga langsung isi di sini kalau ingin standalone)
+    public Sprite encourageIcon;
+    public Sprite empathyIcon;
+    public Sprite rudeIcon;
 
-    public void Setup(KartuSO data)
+    public void Setup(KartuSO kartu)
     {
-        kartuData = data;
-        iconImage.sprite = data.kartuSprite;
-        dialogText.text = data.dialogText;
-    }
+        dialogText.text = kartu.dialogText;
+        typeText.text = kartu.iconType.ToString();
+        satisfyPointText.text = "+" + kartu.satisfyPoint;
 
-    public void OnClick()
-    {
-        // Kirim data ke GameController (misal: untuk validasi cocok/tidak)
-        GameController.Instance.OnPlayCard(kartuData);
-        Destroy(gameObject); // Hapus kartu dari tangan setelah dimainkan
+        switch (kartu.iconType)
+        {
+            case JenisIcon.Encourage:
+                iconImage.sprite = encourageIcon;
+                break;
+            case JenisIcon.Empathy:
+                iconImage.sprite = empathyIcon;
+                break;
+            case JenisIcon.Rude:
+                iconImage.sprite = rudeIcon;
+                break;
+        }
     }
 }

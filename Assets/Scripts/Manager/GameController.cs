@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public class GameController : MonoBehaviour
 {
@@ -21,20 +22,34 @@ public class GameController : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    public void StartGame()
+    public void Start()
     {
         StartDay(0);
     }
 
     void StartDay(int dayIndex)
     {
+        StartCoroutine(StartDayCoroutine(dayIndex));
+    }
+
+    IEnumerator StartDayCoroutine(int dayIndex)
+    {
         currentDay = dayIndex;
         satisfyBar = 0;
         requiredSatisfy = hariData[dayIndex].satisfyPointNeed;
+
         deckManager.SetupDeck(startingDeck);
+
         ui.ShowDayPopup(currentDay + 1);
+
+        yield return new WaitForSeconds(2f); // Tunggu popup selesai
+                                             // Bersihkan kartu lama
+        foreach (Transform child in ui.handContainer)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         for (int i = 0; i < 4; i++) DealCardToHand();
-        NextParentDialog();
+        //NextParentDialog();
     }
 
     void NextParentDialog()

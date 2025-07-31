@@ -1,6 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class UIManager : MonoBehaviour
     public Transform handContainer;
     public GameObject cardPrefab;
 
+    [Header("Hari ke")]
+    public TMP_Text dayText; // ← referensi TMP text "Hari ke-X"
+    //public GameObject dayUI;
+
     // Referensi ikon emoticon di Inspector
     public Sprite encourageIcon;
     public Sprite empathyIcon;
@@ -18,7 +24,18 @@ public class UIManager : MonoBehaviour
 
     public void ShowDayPopup(int day)
     {
-        // TODO: tampilkan popup "Hari ke-" + day
+        //dayUI.SetActive(true);
+        dayText.gameObject.SetActive(true);
+        dayText.text = "Hari ke-" + day;
+        StartCoroutine(HideDayTextAfterDelay());
+        Debug.Log("Menampilkan Hari ke-" + day);
+
+    }
+
+    IEnumerator HideDayTextAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        dayText.gameObject.SetActive(false);
     }
 
     public void UpdateParentDialog(PertanyaanSO p)
@@ -51,10 +68,25 @@ public class UIManager : MonoBehaviour
 
     public void AddCardToHand(KartuSO cardSO)
     {
+        if (cardPrefab == null || handContainer == null)
+        {
+            Debug.LogError("Card prefab atau handContainer belum diset di Inspector.");
+            return;
+        }
+
         var go = Instantiate(cardPrefab, handContainer);
         var cardUI = go.GetComponent<CardView>();
-        cardUI.Setup(cardSO);
+
+        if (cardUI != null)
+        {
+            cardUI.Setup(cardSO);
+        }
+        else
+        {
+            Debug.LogWarning("Prefab tidak memiliki komponen CardView.");
+        }
     }
+
 
     public void ShowWin()
     {
