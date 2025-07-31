@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Pertanyaan Empathy 15
   m_EditorClassIdentifier: 
   requiredIcon: 1
+  ibuReaction: {fileID: 21300000, guid: c367aa52cea7acf44b2f50cd94eb5d8f, type: 3}
+  dialogBox: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
   dialogText: I just want to know I still have a place in your life.

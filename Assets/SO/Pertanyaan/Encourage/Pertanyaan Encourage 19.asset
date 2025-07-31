@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Pertanyaan Encourage 19
   m_EditorClassIdentifier: 
   requiredIcon: 0
+  ibuReaction: {fileID: 21300000, guid: 8a465f9c4c75c2c45bda5bb19c3b31da, type: 3}
+  dialogBox: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
   dialogText: "Do you understand why I\u2019ve been like this lately?"

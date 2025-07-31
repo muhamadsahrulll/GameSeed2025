@@ -3,5 +3,8 @@ using UnityEngine;
 public class PertanyaanSO : ScriptableObject
 {
     public JenisIcon requiredIcon;
+    public Sprite ibuReaction;
+    public Sprite dialogBox;
     [TextArea] public string dialogText;
+    
 }

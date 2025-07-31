@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Pertanyaan Rude 9
   m_EditorClassIdentifier: 
   requiredIcon: 2
+  ibuReaction: {fileID: 21300000, guid: 92c6fd747dcc44f4f806385afa6e7683, type: 3}
+  dialogBox: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
   dialogText: I guess I was just meant to be unlucky.
