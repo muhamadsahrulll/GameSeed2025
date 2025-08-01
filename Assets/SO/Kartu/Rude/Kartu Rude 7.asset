@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconType: 2
   satisfyPoint: 6
+  dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
   kartuSprite: {fileID: 0}
   dialogText: "You\u2019re way too hard on yourself, Mom. Chill a bit, it\u2019s
     not a sin."

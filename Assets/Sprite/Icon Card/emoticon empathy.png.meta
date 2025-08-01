@@ -108,7 +108,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: emoticon empathy_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 494
+        width: 409
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b99781dad680c74e8bb64c4a843378e
+      internalID: -684525170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +140,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      emoticon empathy_0: 1856765534
+      emoticon empathy_1: -684525170
+      emoticon empathy_2: -1466852723
+      emoticon empathy_3: -2131265417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

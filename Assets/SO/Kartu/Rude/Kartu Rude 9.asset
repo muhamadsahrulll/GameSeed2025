@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconType: 2
   satisfyPoint: 7
+  dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
   kartuSprite: {fileID: 0}
   dialogText: "Mom, seriously. resting doesn\u2019t make you look weak."
   knowledgePoint: 15

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconType: 0
   satisfyPoint: 4
+  dialogBoxAnak: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
   kartuSprite: {fileID: 0}
   dialogText: "If you\u2019re tired, it\u2019s okay to take a break."
   knowledgePoint: 6

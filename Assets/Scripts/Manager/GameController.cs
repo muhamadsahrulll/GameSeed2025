@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     int currentDay;
     int satisfyBar;
     int requiredSatisfy;
-    PertanyaanSO currentPertanyaan;
+    public PertanyaanSO currentPertanyaan;
 
     public static GameController Instance { get; private set; }
 
@@ -44,6 +44,8 @@ public class GameController : MonoBehaviour
         currentDay = dayIndex;
         satisfyBar = 0;
         requiredSatisfy = hariData[dayIndex].satisfyPointNeed;
+        ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
+
 
         // 2) Setup deck
         if (startingDeck == null)
@@ -70,10 +72,10 @@ public class GameController : MonoBehaviour
 
     void NextParentDialog()
     {
-        // Jika deck habis → win
+        // Jika deck habis → lose
         if (deckManager.DrawCount == 0)
         {
-            ui.ShowWin();
+            ui.ShowGameOver();
             return;
         }
 
@@ -101,11 +103,13 @@ public class GameController : MonoBehaviour
         if (card.iconType == currentPertanyaan.requiredIcon)
         {
             // Jawaban benar
+            ui.dialogPanelAnak.SetActive(true);
+            ui.dialogBoxAnak.sprite = card.dialogBoxAnak;
+            ui.anakText.text = card.dialogText;
             satisfyBar += card.satisfyPoint;
             ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
-            ui.ShowChildDialog(card.dialogText);
             deckManager.Discard(card);
-
+            StartCoroutine(Tunggu2Detik());
             if (satisfyBar >= requiredSatisfy)
             {
                 // Selesai hari, langsung start hari berikutnya
@@ -122,6 +126,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    IEnumerator Tunggu2Detik()
+    {
+        yield return new WaitForSeconds(2f);
+
+    }
     public void OnDrawPressed()
     {
         if (satisfyBar > 0)

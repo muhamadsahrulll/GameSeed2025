@@ -6,8 +6,15 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [Header("Dialog Orangtua")]
+    public Image ibuReaction;
+    public Image dialogBoxParent;
     public TMP_Text parentText;
     public Image parentIcon;
+
+    [Header("Dialog Anak")]
+    public GameObject dialogPanelAnak;
+    public Image dialogBoxAnak;
+    public TMP_Text anakText;
 
     [Header("Day Popup")]
     public TMP_Text dayText;
@@ -16,16 +23,13 @@ public class UIManager : MonoBehaviour
     public Transform handContainer;
     public GameObject cardPrefab;
 
-    [Header("Emoticon Icons")]
-    public Sprite encourageIcon;
-    public Sprite empathyIcon;
-    public Sprite rudeIcon;
-
     [Header("Satisfy Bar")]
     public Slider satisfySlider;
+    public TMP_Text satisfyPointText;
 
     [Header("Message Popup")]
     public TMP_Text messageText;
+
 
     public void ShowDayPopup(int day)
     {
@@ -46,27 +50,29 @@ public class UIManager : MonoBehaviour
         switch (p.requiredIcon)
         {
             case JenisIcon.Encourage:
-                parentIcon.sprite = encourageIcon;
+                ibuReaction.sprite = GameController.Instance.currentPertanyaan.ibuReaction;
+                parentIcon.sprite = GameController.Instance.currentPertanyaan.Icon;
+                dialogBoxParent.sprite = GameController.Instance.currentPertanyaan.dialogBox;
                 break;
             case JenisIcon.Empathy:
-                parentIcon.sprite = empathyIcon;
+                ibuReaction.sprite = GameController.Instance.currentPertanyaan.ibuReaction;
+                parentIcon.sprite = GameController.Instance.currentPertanyaan.Icon;
+                dialogBoxParent.sprite = GameController.Instance.currentPertanyaan.dialogBox;
                 break;
             case JenisIcon.Rude:
-                parentIcon.sprite = rudeIcon;
+                ibuReaction.sprite = GameController.Instance.currentPertanyaan.ibuReaction;
+                parentIcon.sprite = GameController.Instance.currentPertanyaan.Icon;
+                dialogBoxParent.sprite = GameController.Instance.currentPertanyaan.dialogBox;
                 break;
         }
-    }
-
-    public void ShowChildDialog(string childText)
-    {
-        // Implementasikan popup dialog anak jika perlu
-        Debug.Log("Dialog anak: " + childText);
     }
 
     public void UpdateSatisfyBar(int current, int max)
     {
         satisfySlider.maxValue = max;
         satisfySlider.value = current;
+        satisfyPointText.text = current.ToString() + " / " + max.ToString();
+
     }
 
     public void AddCardToHand(KartuSO cardSO)
@@ -79,7 +85,12 @@ public class UIManager : MonoBehaviour
 
         var go = Instantiate(cardPrefab, handContainer);
         var cardUI = go.GetComponent<CardView>();
-        if (cardUI != null) cardUI.Setup(cardSO);
+        if (cardUI != null)
+        {
+            cardUI.currentKartu = cardSO;
+            cardUI.Setup(cardSO);
+        }
+            
     }
 
     public void ShowWin()

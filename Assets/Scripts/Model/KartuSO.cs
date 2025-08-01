@@ -5,6 +5,7 @@ public class KartuSO : ScriptableObject
 {
     public JenisIcon iconType;
     public int satisfyPoint;
+    public Sprite dialogBoxAnak;
     public Sprite kartuSprite;
     [TextArea] public string dialogText;
     public int knowledgePoint;

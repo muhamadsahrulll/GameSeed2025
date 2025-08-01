@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pertanyaan Encourage 6
   m_EditorClassIdentifier: 
   requiredIcon: 0
+  Icon: {fileID: 21300000, guid: fd34ad0954628a54bac53524792ea46e, type: 3}
   ibuReaction: {fileID: 21300000, guid: 8a465f9c4c75c2c45bda5bb19c3b31da, type: 3}
   dialogBox: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
   dialogText: "I\u2019m scared I\u2019m not good enough."

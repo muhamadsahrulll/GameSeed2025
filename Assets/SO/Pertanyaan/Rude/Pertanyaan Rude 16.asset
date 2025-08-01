@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pertanyaan Rude 16
   m_EditorClassIdentifier: 
   requiredIcon: 2
+  Icon: {fileID: 21300000, guid: ca9182f9d6ae5b94486d46ef8dc4430f, type: 3}
   ibuReaction: {fileID: 21300000, guid: 92c6fd747dcc44f4f806385afa6e7683, type: 3}
   dialogBox: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
   dialogText: "Does anyone even notice when I\u2019m not okay?"
