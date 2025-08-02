@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    private List<KartuSO> drawPile;
-    private List<KartuSO> discardPile;
+    public List<KartuSO> drawPile;
+    public List<KartuSO> giftPile;
+    public List<KartuSO> discardPile;
 
     public void SetupDeck(DeckAndDiscardSO deckSO)
     {
-        drawPile = new List<KartuSO>(deckSO.kartuList);
-        discardPile = new List<KartuSO>();
-        Shuffle(drawPile);
+            drawPile = new List<KartuSO>(deckSO.kartuList);
+            giftPile = new List<KartuSO>(deckSO.kartuList);
+            discardPile = new List<KartuSO>();
+            Shuffle(drawPile);
     }
 
     public void Shuffle(List<KartuSO> list)
@@ -37,4 +39,14 @@ public class DeckManager : MonoBehaviour
     }
 
     public int DrawCount => drawPile.Count;
+
+    public KartuSO DrawGift()
+    {
+                if (drawPile.Count == 0) return null;
+        KartuSO card = drawPile[0];
+        drawPile.RemoveAt(0);
+        drawPile.Add(card);
+        return card;
+
+    }
 }

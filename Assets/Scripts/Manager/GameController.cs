@@ -10,8 +10,9 @@ public class GameController : MonoBehaviour
     public DeckManager deckManager;
     public UIManager ui;
 
-    int currentDay;
-    int satisfyBar;
+    public int currentDay;
+    public int satisfyBar;
+    public int satisfyBarTotal;
     int requiredSatisfy;
     public PertanyaanSO currentPertanyaan;
 
@@ -48,35 +49,46 @@ public class GameController : MonoBehaviour
 
 
         // 2) Setup deck
-        if (startingDeck == null)
-        {
-            Debug.LogError("Starting Deck belum di-assign!");
-            yield break;
-        }
-        deckManager.SetupDeck(startingDeck);
+            if (startingDeck == null)
+            {
+                Debug.LogError("Starting Deck belum di-assign!");
+                yield break;
+            }
+            deckManager.SetupDeck(startingDeck);
+
 
         // 3) Tampilkan "Hari ke-X"
-        ui.ShowDayPopup(currentDay + 1);
-        yield return new WaitForSeconds(2f);
+        StartCoroutine(HariKe());
+        
+            // 4) Bersihkan hand, spawn 4 kartu
+            foreach (Transform child in ui.handContainer)
+                Destroy(child.gameObject);
 
-        // 4) Bersihkan hand, spawn 4 kartu
-        foreach (Transform child in ui.handContainer)
-            Destroy(child.gameObject);
-
-        for (int i = 0; i < 4; i++)
-            DealCardToHand();
+            for (int i = 0; i < 4; i++)
+                DealCardToHand();
+        
 
         // 5) Tampilkan dialog orangtua pertama
-        NextParentDialog();
+        StartCoroutine(NextParentDialog());
     }
 
-    void NextParentDialog()
+    IEnumerator HariKe()
     {
+        ui.giftPanel.SetActive(false);
+        ui.ShowDayPopup(currentDay + 1);
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator NextParentDialog()
+    {
+        yield return new WaitForSeconds(4f);
+        ui.dialogPanelAnak.SetActive(false);
+
         // Jika deck habis → lose
         if (deckManager.DrawCount == 0)
         {
             ui.ShowGameOver();
-            return;
+            yield break;
         }
 
         // Pilih pertanyaan random dan update UI
@@ -107,17 +119,16 @@ public class GameController : MonoBehaviour
             ui.dialogBoxAnak.sprite = card.dialogBoxAnak;
             ui.anakText.text = card.dialogText;
             satisfyBar += card.satisfyPoint;
+            satisfyBarTotal += satisfyBar;
             ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
             deckManager.Discard(card);
-            StartCoroutine(Tunggu2Detik());
             if (satisfyBar >= requiredSatisfy)
             {
-                // Selesai hari, langsung start hari berikutnya
-                StartDay(currentDay + 1);
+                ui.ShowWin();
             }
             else
             {
-                NextParentDialog();
+                StartCoroutine(NextParentDialog());
             }
         }
         else
@@ -126,11 +137,38 @@ public class GameController : MonoBehaviour
         }
     }
 
-    IEnumerator Tunggu2Detik()
-    {
-        yield return new WaitForSeconds(2f);
 
+    public void GiftDays()
+    {
+        deckManager.Shuffle(deckManager.giftPile);
+        // Draw 3 kartu
+        for (int i = 0; i < 3; i++)
+        {
+            var card = deckManager.DrawGift();
+            if (card != null)
+            {
+                ui.CardDisplay(card);
+            }
+            else
+            {
+                Debug.LogWarning("GiftPile kosong saat draw ke-" + (i + 1));
+                break;
+            }
+        }
     }
+
+    public void OnGetPressed(KartuSO cardSO)
+    {
+        startingDeck.kartuList.Add(cardSO);
+        ui.deckCounter.text = deckManager.drawPile.Count.ToString();
+
+        // Selesai hari, langsung start hari berikutnya
+        StartDay(currentDay + 1);
+
+        // 3) Tampilkan "Hari ke-X"
+        StartCoroutine(HariKe());
+    }
+
     public void OnDrawPressed()
     {
         if (satisfyBar > 0)
@@ -148,7 +186,9 @@ public class GameController : MonoBehaviour
         {
             satisfyBar--;
             ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
-            NextParentDialog();
+            StartCoroutine(NextParentDialog());
+            ui.dialogPanelAnak.SetActive(true);
+            ui.anakText.text = "I don't know what to say";
         }
         else ui.ShowMessage("Memerlukan 1 satisfy point");
     }
@@ -157,4 +197,5 @@ public class GameController : MonoBehaviour
     {
         ui.ShowGameOver();
     }
+
 }
