@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -209842145, guid: 546d2456857b34a479c47fcbd61b1ca3, type: 3}
   dialogText: "Please, don\u2019t be the annoying version of yourself."
   knowledgePoint: 9
+  hargaKartu: 6

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 749879404, guid: 0a42936f5be9ad24eb2781f070ac9ae6, type: 3}
   dialogText: "You\u2019ve done such an amazing job all this time."
   knowledgePoint: 2
+  hargaKartu: 1

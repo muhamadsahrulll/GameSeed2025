@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -512361184, guid: 7edcdb0b771389c479090a3a2f77c2ef, type: 3}
   dialogText: "If you\u2019re tired, it\u2019s okay to take a break."
   knowledgePoint: 6
+  hargaKartu: 4

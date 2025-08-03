@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -822623919, guid: f71b3d9c2f5fb6144ae48cbd905d7180, type: 3}
   dialogText: You matter, and I really care about you.
   knowledgePoint: 9
+  hargaKartu: 6

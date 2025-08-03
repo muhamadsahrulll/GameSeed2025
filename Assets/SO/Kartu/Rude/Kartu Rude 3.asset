@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -595199463, guid: d043c8794c40a3b47a79dde0c699fcd9, type: 3}
   dialogText: "Seriously, stop being soft. You\u2019re tougher than this."
   knowledgePoint: 6
+  hargaKartu: 4

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 437745271, guid: 17ad92ec5002aeb4cb08e2de51c7d441, type: 3}
   dialogText: "I don\u2019t have the answers, but I can stay with you."
   knowledgePoint: 9
+  hargaKartu: 6

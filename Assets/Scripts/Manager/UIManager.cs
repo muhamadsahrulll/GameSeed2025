@@ -51,6 +51,14 @@ public class UIManager : MonoBehaviour
     [Header("Deck")]
     public TMP_Text deckCounter;
 
+    [Header("Knowledge (Koin)")]
+    public TMP_Text knowledgeText;
+
+
+    public void UpdateKnowledge(int amount)
+    {
+        knowledgeText.text = amount.ToString();
+    }
 
 
     public void ShowDayPopup(int day)

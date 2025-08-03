@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -2065537103, guid: d7790e014df178b48a91bbc72b71b02a, type: 3}
   dialogText: "I\u2019m listening. You can talk to me anytime."
   knowledgePoint: 6
+  hargaKartu: 4

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 264507816, guid: ee067d881f248074984e3c62891c7b97, type: 3}
   dialogText: We can get through this together.
   knowledgePoint: 9
+  hargaKartu: 6

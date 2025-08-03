@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -1761072426, guid: 26c1995061dd8454bb82b5f4637569e0, type: 3}
   dialogText: You deserve to be happy.
   knowledgePoint: 12
+  hargaKartu: 10

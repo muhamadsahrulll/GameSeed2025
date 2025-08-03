@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -1360957406, guid: 451dc183131917f45a6f6db80efa9ada, type: 3}
   dialogText: I believe better days are coming for you.
   knowledgePoint: 9
+  hargaKartu: 6

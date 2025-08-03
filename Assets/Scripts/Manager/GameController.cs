@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour
     int requiredSatisfy;
     public PertanyaanSO currentPertanyaan;
 
+    public KnowledgeSO knowledgeData; // SO Knowledge
+
+
     public static GameController Instance { get; private set; }
 
     void Awake()
@@ -70,7 +73,33 @@ public class GameController : MonoBehaviour
 
         // 5) Tampilkan dialog orangtua pertama
         StartCoroutine(NextParentDialog());
+        // 
+        ui.UpdateKnowledge(knowledgeData.knowledgePoint);
+
     }
+
+    public void TryBuyCard(KartuSO so, ShopCardView view)
+    {
+        if (knowledgeData.knowledgePoint >= so.hargaKartu)
+        {
+            // Potong koin
+            knowledgeData.knowledgePoint -= so.hargaKartu;
+            ui.UpdateKnowledge(knowledgeData.knowledgePoint);
+
+            // Tambah ke deck
+            startingDeck.kartuList.Add(so);
+            ui.deckCounter.text = deckManager.drawPile.Count.ToString();
+
+            // Tandai sold & hapus slot
+            view.MarkSold();
+            // atau: Destroy(view.gameObject);
+        }
+        else
+        {
+            ui.ShowMessage("Koin tidak cukup!");
+        }
+    }
+
 
     IEnumerator HariKe()
     {

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -557037801, guid: 83c0b725541d608448da9e691a487388, type: 3}
   dialogText: You are enough. Now, tomorrow, always.
   knowledgePoint: 15
+  hargaKartu: 12

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 354679728, guid: e0d4ba2451e527e45b01bbd634482ffa, type: 3}
   dialogText: Really? Giving up that easy? Weak.
   knowledgePoint: 2
+  hargaKartu: 1

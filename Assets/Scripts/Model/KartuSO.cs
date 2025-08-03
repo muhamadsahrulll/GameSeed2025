@@ -9,4 +9,5 @@ public class KartuSO : ScriptableObject
     public Sprite kartuSprite;
     [TextArea] public string dialogText;
     public int knowledgePoint;
+    public int hargaKartu;
 }

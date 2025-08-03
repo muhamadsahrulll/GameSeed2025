@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -784573467, guid: 3939e6e34e15caa4db494e61731b787f, type: 3}
   dialogText: Today is hard, but so are you.
   knowledgePoint: 15
+  hargaKartu: 12

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -1416036410, guid: bbdec8153d1bc0f4e96789ad65e95d91, type: 3}
   dialogText: I believe in you.
   knowledgePoint: 12
+  hargaKartu: 10

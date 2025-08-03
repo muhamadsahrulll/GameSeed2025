@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 784005266, guid: 61922cb12f0d40e4fb5499537700c62b, type: 3}
   dialogText: "Mom, seriously. resting doesn\u2019t make you look weak."
   knowledgePoint: 15
+  hargaKartu: 12

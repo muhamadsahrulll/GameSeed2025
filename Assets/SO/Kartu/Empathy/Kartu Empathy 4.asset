@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: 230051086, guid: 434fe2f8796c3ee4eb93e149eca11e04, type: 3}
   dialogText: "Sounds like that\u2019s been really exhausting for you."
   knowledgePoint: 6
+  hargaKartu: 4

@@ -18,3 +18,4 @@ MonoBehaviour:
   kartuSprite: {fileID: -2086083861, guid: c2837865e8d25bf409ae239eb31ea1a6, type: 3}
   dialogText: Come on, losing to a problem that small? Shame.
   knowledgePoint: 6
+  hargaKartu: 4
