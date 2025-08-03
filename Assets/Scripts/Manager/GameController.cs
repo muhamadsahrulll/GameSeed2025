@@ -96,12 +96,24 @@ public class GameController : MonoBehaviour
         ui.UpdateParentDialog(currentPertanyaan);
     }
 
-    void DealCardToHand()
+    bool DealCardToHand()
     {
+        if (ui.handContainer.childCount >= 5)
+        {
+            ui.ShowMessage("Maksimal 5 kartu di tangan");
+            return false;
+        }
+
         var card = deckManager.Draw();
         if (card != null)
+        {
             ui.AddCardToHand(card);
+            return true;
+        }
+
+        return false;
     }
+
 
     // Dipanggil saat user klik prefab kartu
     public void OnPlayCard(KartuSO card)
@@ -173,12 +185,20 @@ public class GameController : MonoBehaviour
     {
         if (satisfyBar > 0)
         {
-            satisfyBar--;
-            DealCardToHand();
-            ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
+            bool success = DealCardToHand();
+            if (success)
+            {
+                satisfyBar--;
+                ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
+            }
+            // Kalau tidak berhasil, tidak ngapa-ngapain
         }
-        else ui.ShowMessage("Memerlukan 1 satisfy point");
+        else
+        {
+            ui.ShowMessage("Memerlukan 1 satisfy point");
+        }
     }
+
 
     public void OnEndTurnPressed()
     {

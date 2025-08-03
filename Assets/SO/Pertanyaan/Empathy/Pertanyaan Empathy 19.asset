@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredIcon: 1
   Icon: {fileID: 21300000, guid: 534830de3ca6ac8499ae97ed15913b97, type: 3}
-  ibuReaction: {fileID: 21300000, guid: c367aa52cea7acf44b2f50cd94eb5d8f, type: 3}
+  ibuReaction: {fileID: 1014355267, guid: c367aa52cea7acf44b2f50cd94eb5d8f, type: 3}
   dialogBox: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
   dialogText: "I\u2019m afraid I\u2019ve grown too distant from you."
