@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1ff77f41e7107641a26d15318358105
+guid: 6391fe0c8941c8549b3871068f39df63
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: draw icon_0
+      name: pricetag_0
       rect:
         serializedVersion: 2
-        x: 606
-        y: 63
-        width: 675
-        height: 966
+        x: 190
+        y: 129
+        width: 1488
+        height: 823
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce59987bcbd6c548ae3dbe6103b4c70
-      internalID: -678475933
+      spriteID: 02f91ee6e7254d840a6372b50c693c32
+      internalID: -144592274
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      draw icon_0: -678475933
+      pricetag_0: -144592274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

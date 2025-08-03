@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1ff77f41e7107641a26d15318358105
+guid: ec864631f4dcb1a46b3e430a7d6831f8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: draw icon_0
+      name: window buat icon_0
       rect:
         serializedVersion: 2
-        x: 606
-        y: 63
-        width: 675
-        height: 966
+        x: 194
+        y: 167
+        width: 1472
+        height: 669
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce59987bcbd6c548ae3dbe6103b4c70
-      internalID: -678475933
+      spriteID: 7b94d33469d83664b8d3292f7ecce911
+      internalID: 893596909
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      draw icon_0: -678475933
+      window buat icon_0: 893596909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

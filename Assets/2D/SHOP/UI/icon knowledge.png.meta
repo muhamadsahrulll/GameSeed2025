@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1ff77f41e7107641a26d15318358105
+guid: fe03411e3534f2c45a49b6fb169fdb1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: draw icon_0
+      name: icon knowledge_0
       rect:
         serializedVersion: 2
-        x: 606
-        y: 63
-        width: 675
-        height: 966
+        x: 410
+        y: 240
+        width: 1116
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce59987bcbd6c548ae3dbe6103b4c70
-      internalID: -678475933
+      spriteID: 0fe2802b24e01d24eb1dde766cbe6f9f
+      internalID: -1013919966
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      draw icon_0: -678475933
+      icon knowledge_0: -1013919966
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

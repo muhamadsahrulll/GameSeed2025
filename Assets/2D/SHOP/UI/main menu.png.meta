@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1ff77f41e7107641a26d15318358105
+guid: c5038d2e398d5fd4b81f64e0fbb38853
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: draw icon_0
+      name: main menu_0
       rect:
         serializedVersion: 2
-        x: 606
-        y: 63
-        width: 675
-        height: 966
+        x: 161
+        y: 269
+        width: 1550
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce59987bcbd6c548ae3dbe6103b4c70
-      internalID: -678475933
+      spriteID: 668b1883e3ced174f9f638c55b76f643
+      internalID: -212378570
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      draw icon_0: -678475933
+      main menu_0: -212378570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
