@@ -15,7 +15,7 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 4
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 724275366, guid: a85c64b9e1821574dae01a1934550f1a, type: 3}
   dialogText: "You don\u2019t have to be strong all the time. It\u2019s okay to feel
     vulnerable sometimes."
   knowledgePoint: 6

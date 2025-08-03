@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 5
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 437745271, guid: 17ad92ec5002aeb4cb08e2de51c7d441, type: 3}
   dialogText: "I don\u2019t have the answers, but I can stay with you."
   knowledgePoint: 9

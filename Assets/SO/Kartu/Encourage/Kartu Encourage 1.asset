@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 0
   satisfyPoint: 3
   dialogBoxAnak: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 749879404, guid: 0a42936f5be9ad24eb2781f070ac9ae6, type: 3}
   dialogText: "You\u2019ve done such an amazing job all this time."
   knowledgePoint: 2

@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 6
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 384071328, guid: 924e85c55d6c98e418229c5b4db84b99, type: 3}
   dialogText: "I understand, and I\u2019m still supporting you."
   knowledgePoint: 12

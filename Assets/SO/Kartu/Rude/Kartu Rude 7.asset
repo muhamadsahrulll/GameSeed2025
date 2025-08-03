@@ -15,7 +15,7 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 6
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -1391503786, guid: 780dc41491c7bc743b2a8008fd855a9c, type: 3}
   dialogText: "You\u2019re way too hard on yourself, Mom. Chill a bit, it\u2019s
     not a sin."
   knowledgePoint: 12

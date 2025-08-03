@@ -15,7 +15,7 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 5
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 135236335, guid: 75fa297cc5dba39479c49daf6e29ed71, type: 3}
   dialogText: "Mom, it\u2019s okay to be tired, but don\u2019t make it a daily soap
     opera."
   knowledgePoint: 9

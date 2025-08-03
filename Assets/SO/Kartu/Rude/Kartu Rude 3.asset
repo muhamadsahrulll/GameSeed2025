@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 4
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -595199463, guid: d043c8794c40a3b47a79dde0c699fcd9, type: 3}
   dialogText: "Seriously, stop being soft. You\u2019re tougher than this."
   knowledgePoint: 6

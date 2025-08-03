@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 4
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 1391282189, guid: c92d66e4dc07fa144a365340500525ec, type: 3}
   dialogText: "Reality sucks. But sulking in a corner won\u2019t fix it."
   knowledgePoint: 6

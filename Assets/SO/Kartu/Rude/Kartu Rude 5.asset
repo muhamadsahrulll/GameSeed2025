@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 5
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -209842145, guid: 546d2456857b34a479c47fcbd61b1ca3, type: 3}
   dialogText: "Please, don\u2019t be the annoying version of yourself."
   knowledgePoint: 9

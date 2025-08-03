@@ -15,7 +15,7 @@ MonoBehaviour:
   iconType: 2
   satisfyPoint: 6
   dialogBoxAnak: {fileID: -1672550553, guid: f5e55ac8fec73ea4492787765c5ad743, type: 3}
-  kartuSprite: {fileID: 0}
-  dialogText: "Dad, sometimes it\u2019s not fate screwing things up. it\u2019s your
+  kartuSprite: {fileID: 152556371, guid: 15cfc14a6a3aa4e43a2defbdf350e483, type: 3}
+  dialogText: "Mom, sometimes it\u2019s not fate screwing things up. it\u2019s your
     own stubbornness."
   knowledgePoint: 12

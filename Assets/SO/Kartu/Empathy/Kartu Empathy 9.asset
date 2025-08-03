@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 7
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -557037801, guid: 83c0b725541d608448da9e691a487388, type: 3}
   dialogText: You are enough. Now, tomorrow, always.
   knowledgePoint: 15

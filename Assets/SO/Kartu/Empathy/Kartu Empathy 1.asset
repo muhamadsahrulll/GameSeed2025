@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 3
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 1150419047, guid: 107a9443eaffac3479caa703665b6aa9, type: 3}
   dialogText: "You\u2019re not alone in this. I\u2019m with you."
   knowledgePoint: 2

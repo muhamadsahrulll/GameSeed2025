@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 0
   satisfyPoint: 5
   dialogBoxAnak: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: 264507816, guid: ee067d881f248074984e3c62891c7b97, type: 3}
   dialogText: We can get through this together.
   knowledgePoint: 9

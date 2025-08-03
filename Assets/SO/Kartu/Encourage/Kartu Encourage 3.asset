@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 0
   satisfyPoint: 4
   dialogBoxAnak: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -513994930, guid: e37a8e59d2e4e1d40b90450577a23a36, type: 3}
   dialogText: Thank you for being strong all this time.
   knowledgePoint: 6

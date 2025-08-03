@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 0
   satisfyPoint: 5
   dialogBoxAnak: {fileID: -2062091480, guid: ffdc4f7039e665242bb4cd7022aef5b2, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -1360957406, guid: 451dc183131917f45a6f6db80efa9ada, type: 3}
   dialogText: I believe better days are coming for you.
   knowledgePoint: 9

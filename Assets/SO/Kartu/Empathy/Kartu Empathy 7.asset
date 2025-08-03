@@ -15,6 +15,6 @@ MonoBehaviour:
   iconType: 1
   satisfyPoint: 6
   dialogBoxAnak: {fileID: 778569460, guid: 5ce4426688081d945a1dca6d8ed60587, type: 3}
-  kartuSprite: {fileID: 0}
+  kartuSprite: {fileID: -1761072426, guid: 26c1995061dd8454bb82b5f4637569e0, type: 3}
   dialogText: You deserve to be happy.
   knowledgePoint: 12
