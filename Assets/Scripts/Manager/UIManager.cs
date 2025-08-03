@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     [Header("Game Over")]
     public GameObject GameOver;
     public TMP_Text Days;
+    public int cardsPlayed;
     public TMP_Text Cards;
     public TMP_Text Points;
     public TMP_Text Total;
@@ -70,8 +71,8 @@ public class UIManager : MonoBehaviour
         }
         DayAnim.Play("fadein", 0, 0f);
         dayText.gameObject.SetActive(true);
-        dayText.text = $"Hari ke-{day}";
-        dayTextNavbar.text = $"Hari ke-{day}";
+        dayText.text = $"Day-{day}";
+        dayTextNavbar.text = $"Day-{day}";
         StartCoroutine(HideDayPopup());
     }
 
@@ -168,10 +169,14 @@ public class UIManager : MonoBehaviour
         // Tampilkan panel lose
         GameOver.SetActive(true);
         Days.text = $"{GameController.Instance.currentDay}({(GameController.Instance.currentDay / 2)})";
-        Cards.text = $"{deckManager.discardPile.Count}({(deckManager.discardPile.Count/2)})";
+        Cards.text = $"{cardsPlayed}({(cardsPlayed/2)})";
         Points.text = $"{GameController.Instance.satisfyBarTotal}({(GameController.Instance.satisfyBarTotal / 20)})";
-        totalInt = (GameController.Instance.currentDay / 2) + (deckManager.discardPile.Count / 2) + (GameController.Instance.satisfyBarTotal / 20);
+        totalInt = (GameController.Instance.currentDay / 2) + (cardsPlayed / 2) + (GameController.Instance.satisfyBarTotal / 20);
         Total.text = totalInt.ToString();
+
+        //
+        GameController.Instance.knowledgeData.knowledgePoint = totalInt;
+        UpdateKnowledge(GameController.Instance.knowledgeData.knowledgePoint);
     }
 
     public void ShowMessage(string msg)

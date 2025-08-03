@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class MusicManager : MonoBehaviour
 {
     public AudioClip clickSFX;
-    public AudioSource audioSource; // bisa diisi dari inspector atau otomatis dicari
+    public AudioSource SFXaudioSource; // bisa diisi dari inspector atau otomatis dicari
 
     public bool isMusicOn = true;
-    public AudioSource audioSrc;
+    public AudioSource MusicaudioSrc;
     public Button musicButton;
     public Sprite musicOn;
     public Sprite musicOff;
@@ -43,9 +43,9 @@ public class MusicManager : MonoBehaviour
     }
     void PlayClickSFX()
     {
-        if (clickSFX != null && audioSource != null)
+        if (clickSFX != null && SFXaudioSource != null)
         {
-            audioSource.PlayOneShot(clickSFX);
+            SFXaudioSource.PlayOneShot(clickSFX);
         }
     }
 
@@ -56,16 +56,23 @@ public class MusicManager : MonoBehaviour
             cb = musicButton.colors;
             cb.normalColor = new Color(0.7f, 0.7f, 0.7f);
             isMusicOn = false;
-            musicButton.image.sprite = musicOff;
-            audioSrc.Pause();
+            if (musicButton != null)
+            {
+                musicButton.image.sprite = musicOff;
+            }
+            MusicaudioSrc.Pause();
         }
         else
         {
             cb = musicButton.colors;
             cb.normalColor = new Color(1f, 1f, 1f);
             isMusicOn = true;
-            musicButton.image.sprite = musicOn;
-            audioSrc.Play();
+            if(musicButton != null)
+            {
+                musicButton.image.sprite = musicOn;
+            }
+            
+            MusicaudioSrc.Play();
         }
     }
 }

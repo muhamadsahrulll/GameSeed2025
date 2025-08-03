@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89acdc1e5dcdc9644b59e55001f85220, type: 3}
-  m_Name: DeckPile
+  m_Name: OngoingPile
   m_EditorClassIdentifier: 
-  deckName: Deck
+  deckName: Ongoing
   kartuList:
   - {fileID: 11400000, guid: 268da1c3e88445b4c96198c1f4a0402e, type: 2}
   - {fileID: 11400000, guid: 7cc1039cbe8898c4fa2a4a11bec72646, type: 2}

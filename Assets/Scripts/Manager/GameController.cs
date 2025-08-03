@@ -6,10 +6,12 @@ public class GameController : MonoBehaviour
 {
     public HariSO[] hariData;
     public DeckAndDiscardSO startingDeck;
+    public DeckAndDiscardSO ongoingDeck;
     public PertanyaanSO[] pertanyaanPool;
     public DeckManager deckManager;
     public UIManager ui;
 
+    int turn = 1;
     public int currentDay;
     public int satisfyBar;
     public int satisfyBarTotal;
@@ -57,7 +59,13 @@ public class GameController : MonoBehaviour
                 Debug.LogError("Starting Deck belum di-assign!");
                 yield break;
             }
-            deckManager.SetupDeck(startingDeck);
+        //ongoingDeck.kartuList = startingDeck.kartuList;
+        if(turn == 1)
+        {
+            ongoingDeck.kartuList = new List<KartuSO>(startingDeck.kartuList);
+            turn++;
+        }
+        deckManager.SetupDeck(ongoingDeck);
 
 
         // 3) Tampilkan "Hari ke-X"
@@ -73,8 +81,7 @@ public class GameController : MonoBehaviour
 
         // 5) Tampilkan dialog orangtua pertama
         StartCoroutine(NextParentDialog());
-        // 
-        ui.UpdateKnowledge(knowledgeData.knowledgePoint);
+        
 
     }
 
@@ -96,7 +103,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            ui.ShowMessage("Koin tidak cukup!");
+            ui.ShowMessage("Insufficient Knowledge Points!");
         }
     }
 
@@ -129,7 +136,7 @@ public class GameController : MonoBehaviour
     {
         if (ui.handContainer.childCount >= 5)
         {
-            ui.ShowMessage("Maksimal 5 kartu di tangan");
+            ui.ShowMessage("Maximum 5 card in hand");
             return false;
         }
 
@@ -149,13 +156,14 @@ public class GameController : MonoBehaviour
     {
         if (currentPertanyaan == null)
         {
-            ui.ShowMessage("Belum ada pertanyaan orangtua");
+            ui.ShowMessage("Parent has no question");
             return;
         }
 
         if (card.iconType == currentPertanyaan.requiredIcon)
         {
             // Jawaban benar
+            ui.cardsPlayed++;
             ui.dialogPanelAnak.SetActive(true);
             ui.dialogBoxAnak.sprite = card.dialogBoxAnak;
             ui.anakText.text = card.dialogText;
@@ -174,7 +182,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            ui.ShowMessage("Tidak bisa memainkan kartu ini");
+            ui.ShowMessage("You can't play this card");
         }
     }
 
@@ -200,7 +208,7 @@ public class GameController : MonoBehaviour
 
     public void OnGetPressed(KartuSO cardSO)
     {
-        startingDeck.kartuList.Add(cardSO);
+        ongoingDeck.kartuList.Add(cardSO);
         ui.deckCounter.text = deckManager.drawPile.Count.ToString();
 
         // Selesai hari, langsung start hari berikutnya
@@ -224,7 +232,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            ui.ShowMessage("Memerlukan 1 satisfy point");
+            ui.ShowMessage("Need 1 satisfy point");
         }
     }
 
@@ -233,13 +241,14 @@ public class GameController : MonoBehaviour
     {
         if (satisfyBar > 0)
         {
-            satisfyBar--;
+            satisfyBar = satisfyBar - 2;
             ui.UpdateSatisfyBar(satisfyBar, requiredSatisfy);
             StartCoroutine(NextParentDialog());
             ui.dialogPanelAnak.SetActive(true);
             ui.anakText.text = "I don't know what to say";
+            DealCardToHand();
         }
-        else ui.ShowMessage("Memerlukan 1 satisfy point");
+        else ui.ShowMessage("Need 2 satisfy point");
     }
 
     public void OnSurrenderPressed()

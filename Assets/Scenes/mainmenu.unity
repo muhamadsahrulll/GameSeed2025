@@ -268,18 +268,18 @@ PrefabInstance:
     - target: {fileID: 3418681635803179608, guid: b0540e9e9961c544a939edb3f7376949, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1628564270}
+      objectReference: {fileID: 473863647}
     - target: {fileID: 3418681635803179608, guid: b0540e9e9961c544a939edb3f7376949, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3418681635803179608, guid: b0540e9e9961c544a939edb3f7376949, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: MusicOnOff
       objectReference: {fileID: 0}
     - target: {fileID: 3418681635803179608, guid: b0540e9e9961c544a939edb3f7376949, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: MusicManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3418681635803179608, guid: b0540e9e9961c544a939edb3f7376949, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -700,9 +700,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSFX: {fileID: 8300000, guid: 65e70d2fab4fd3a48a684a2b898df93e, type: 3}
-  audioSource: {fileID: 1119578095}
+  SFXaudioSource: {fileID: 1628564270}
   isMusicOn: 1
-  audioSrc: {fileID: 1628564270}
+  MusicaudioSrc: {fileID: 1119578095}
   musicButton: {fileID: 287844847}
   musicOn: {fileID: 820243877, guid: fc5377489e9e0524b93a913e53683bbf, type: 3}
   musicOff: {fileID: 1144200449, guid: 2b5c8ecfc2459a749863218fab96fdf0, type: 3}

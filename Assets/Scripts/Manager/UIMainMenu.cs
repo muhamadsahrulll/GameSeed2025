@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,10 @@ public class UIMainMenu : MonoBehaviour
         
     }
 
+    public void InteractMusicButton()
+    {
+        MusicManager.Instance.MusicOnOff();
+    }
     public void Begin()
     {
         SceneManager.LoadScene("ingame");
